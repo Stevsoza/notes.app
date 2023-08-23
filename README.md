@@ -1,4 +1,5 @@
 # notes.app
 app for create notes
 
-actual state = processing, only login implemented
+#actual state
+processing, only registration and login implemented
