@@ -1,0 +1,28 @@
+.flex {
+  display: flex;
+  height: 100%;
+  padding: 5px 5px;
+
+  &>div {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-right: 4px;
+    border-radius: 5px;
+  }
+}
+
+@media (width < 768px) {
+  .width {
+    width: 100% !important;
+    overflow: auto;
+    height: 100%;
+  }
+
+  .flex {
+    flex-direction: column;
+
+    &>div {
+      margin: 0 0 4px 0;
+    }
+  }
+
+}

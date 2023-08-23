@@ -1,0 +1,34 @@
+.main {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    // flex-direction: column;
+
+    &>div {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        min-width: 2rem;
+        min-height: 2rem;
+        background-color: rgba(255, 255, 189, 0.185);
+    }
+
+    .tag {
+        font-size: x-small;
+    }
+}
+
+@media(width < 768px) {
+    .main {
+        justify-content: start;
+        flex-direction: column;
+        padding: 1rem 1rem;
+
+        &>div {
+            width: 100%;
+        }
+    }
+}

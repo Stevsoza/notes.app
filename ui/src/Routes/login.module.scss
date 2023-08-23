@@ -1,0 +1,44 @@
+.main {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  text-decoration-line: none;
+  padding: 0.8rem 1rem;
+  border: 3px solid #dadadada;
+  border-radius: 0.5rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #a0a0a0da;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  label {
+    margin-left: 8px;
+    margin-bottom: 5px;
+  }
+
+  button {
+    margin-top: 10px;
+    // border: solid 2px #69696900;
+    // background-color: #707070da;
+  }
+
+  a {
+    text-decoration: none;
+    text-align: center;
+  }
+}
+
+.form {
+  margin-bottom: 100px;
+}
