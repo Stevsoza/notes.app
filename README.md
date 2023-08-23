@@ -1,2 +1,2 @@
 # notes.app
-app for create notes online
+app for create notes
