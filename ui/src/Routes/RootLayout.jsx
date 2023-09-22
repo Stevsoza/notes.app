@@ -1,30 +1,15 @@
-import { Outlet } from "react-router-dom";
-import css from "./layout.module.scss";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import { useNavigate, useLocation } from "react-router-dom";
-import getUser from "../utils/getUser";
+import css from "./layout.module.scss";
 
 const RootLayout = () => {
-    const [name, setName] = useState({ name: "" });
     const navigate = useNavigate();
 
     useEffect(() => {
         if (location.pathname == "/react-app" || location.pathname == "/react-app/") {
             navigate("/react-app/login");
         }
-        const nameFunction = async () => {
-            let { username } = await getUser();
-            // let { username } = user;
-            if (!username) {
-                navigate("/react-app/login");
-            } else {
-                setName(() => ({
-                    name: username,
-                }));
-            }
-        };
-        nameFunction();
     }, []);
 
     const documentHeight = () => {
@@ -44,8 +29,8 @@ const RootLayout = () => {
 
     return (
         <div id="top-div" className={css["flex"]}>
-            <Navbar name={name?.name} isNav={showNav} />
-            <div className={css.width} style={{ width: showNav ? "calc(100% - 200px)" : "100%" }}>
+            <Navbar isNav={showNav} />
+            <div id="prueba-container" className={css.width} style={{ width: showNav ? "calc(100% - 200px)" : "100%", overflow: "auto" }}>
                 <Outlet />
             </div>
         </div>

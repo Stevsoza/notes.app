@@ -1,13 +1,14 @@
 // const express = require('express');
 import express from 'express';
-import knex from 'knex'
+import knex from 'knex';
 // const bodyParser = require('body-parser');
 import bodyParser from 'body-parser';
 // const db = require('./db');
-import db from './db.js'
-import bcrypt from 'bcrypt'
-import session from 'express-session';
+import bcrypt from 'bcrypt';
 import cookieParser from 'cookie-parser';
+import session from 'express-session';
+import db from './db.js';
+
 
 const db2 = knex({
     client: 'sqlite3',
@@ -18,6 +19,7 @@ const db2 = knex({
 const app = express();
 // const db = await dbs()
 const port = 3000;
+// app.user(cors())
 
 app.use(bodyParser.json());
 app.use(cookieParser());

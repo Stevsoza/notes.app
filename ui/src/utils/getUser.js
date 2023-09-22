@@ -1,3 +1,5 @@
+const host = import.meta.env.VITE_HOST
+
 const getUser = async () => {
     const requestOptions = {
         method: 'GET',
@@ -5,7 +7,7 @@ const getUser = async () => {
         // body: JSON.stringify({})
     }
 
-    const res = await fetch('https://stevsoza.com/api/login', requestOptions)
+    const res = await fetch(`${host}/api/login`, requestOptions)
 
     let obj = await res.json()
 

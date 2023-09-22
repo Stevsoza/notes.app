@@ -24,6 +24,9 @@
 }
 
 .csbtn{
+    background-color: rgba(0,0,0, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
     &:active{
         color: rgb(104, 104, 104);
     }

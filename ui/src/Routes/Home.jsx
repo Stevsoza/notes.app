@@ -1,8 +1,9 @@
 // import { useNavigate } from "react-router-dom"
 // import Card from '../components/Card'
-import css from './Home.module.scss'
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 import getUser from '../utils/getUser'
+import css from './Home.module.scss'
+
 
 function Home() {
     const [user, setUser] = useState({ id: '' , username: ''})
@@ -13,14 +14,13 @@ function Home() {
             const user= await getUser()
             setUser(()=> user)
         }
-
         fetchname()
 
     }, [])
 
     return (
 
-        <div className={css.main}>
+        <div id="cont-home" className={css.main}>
             <div>
                 <div className={css.tag}>username</div>
                 <div> {user.username} </div>

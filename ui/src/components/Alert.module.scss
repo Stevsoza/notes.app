@@ -1,0 +1,29 @@
+.context{
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  color: gray;
+
+
+  div{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1em;
+    text-align: center;
+  }
+}
+
+
+.hide{
+  display: none;
+}
+
+

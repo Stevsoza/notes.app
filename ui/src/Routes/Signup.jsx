@@ -1,6 +1,9 @@
-import styles from './register.module.scss'
+import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import styles from './register.module.scss'
+
+
+const host =  import.meta.env.VITE_HOST
 
 function Signup() {
     const [value, setValue] = useState({
@@ -29,7 +32,7 @@ function Signup() {
             body: JSON.stringify({ name: value.name, lastname: value.lastname, username: value.username, email: value.email, password: value.password, age: value.age })
         }
         console.log(requestOptions.body)
-        fetch('https://stevsoza.com/api/signup', requestOptions)
+        fetch(`${host}/api/signup`, requestOptions)
             .then(response => response.json())
             .then(data => data.message ? navigate('/react-app/login') : alert('user already exists'))
 
@@ -40,6 +43,7 @@ function Signup() {
             [e.target.name]: e.target.value
         }))
     }
+
 
 
     return (

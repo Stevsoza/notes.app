@@ -1,5 +1,5 @@
 .main {
-  height: 100%;
+  // height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -35,6 +35,8 @@
       margin-top: 10px;
       margin: 30px 10px;
     }
+
+
   }
   .container2 {
     // display: flex;
@@ -86,8 +88,9 @@
       }
     }
     .form-group {
-      padding: 0 1rem;
+      padding: 1rem 1rem;
       margin-bottom: 1rem;
+      margin-top: 1rem;
       display: flex;
       flex: 0 0 50%;
       flex-direction: column;
@@ -97,6 +100,13 @@
         margin-bottom: 0.5rem;
       }
     }
+  }
+
+  a{
+    margin-top: 10px;
+    background-color: rgba(0,0,0, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
   }
 }
 
